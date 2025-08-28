@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #000000, #444444);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      border-left: 5px solid #444;
+      padding-left: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+
+  /* Tamaño uniforme */
+  min-width: 250px;
+  max-width: 300px;
+
+  /* ❌ quita el centrado */
+  margin: 0;
+}
+
+/* Ajuste solo para la sección de accesorios */
+.catalogo.accesorios {
+  justify-content: start; /* alinea a la izquierda */
+  display: flex;          /* usamos flexbox en vez de grid */
+  gap: 20px;              /* espacio uniforme */
+  flex-wrap: wrap;        /* que no se salga en pantallas chicas */
+}
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #222;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>CATÁLOGOS PRICE SHOES</header>
+
+<!-- CALZADO -->
+<section>
+  <h2>Calzado</h2>
+  <div class="catalogo">
+    <div class="card"><img src="img/importados.jpg"><h3>IMPORTADOS</h3><a href="https://drive.google.com/file/d/1srnyr0pms_WdCXh6c-RqniWdalAXTQYW/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/urbano.jpg"><h3>URBANO</h3><a href="https://drive.google.com/file/d/1O0LCOQ8uqoQ__ZYgcOXUU5hEya45ptei/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/botas.jpg"><h3>BOTAS</h3><a href="https://drive.google.com/file/d/1QZanaFI1nQPObYLMS31hog-21V5Y8Rnu/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/exclusivos.jpg"><h3>EXCLUSIVOS</h3><a href="https://drive.google.com/file/d/1PXroqrqDKbwF9FRP5W8e5xGRGHn0oICL/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/confort.jpg"><h3>CONFORT</h3><a href="https://drive.google.com/file/d/1qVxQ2cR_VrVscF8ZLRoUZLSOKMWckvPC/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/rfs.jpg"><h3>READY FOR SCHOOL</h3><a href="https://drive.google.com/file/d/18C2cgCtoZi3LftOCARAOe6ZtMpRpIZII/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/teu.jpg"><h3>TODO EN UNO</h3><a href="https://drive.google.com/file/d/19-ljFnq4O8Yd2oz02VdlVFfv4pcJDK4Z/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/sandalias.jpg"><h3>SANDALIAS</h3><a href="https://drive.google.com/file/d/1meGs6_fqfo7nZDY8p3C2WRgrMy52mK1t/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/botas2025.jpg"><h3>BOTAS 2025</h3><a href="https://drive.google.com/file/d/1jZDcJ4HyXzQBOC6a1KzGzXAJcHRNqIAz/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/caballeros.jpg"><h3>CABALLEROS</h3><a href="https://drive.google.com/file/d/1FdLcjZ4ZwzCSnZ8c7ZUsQVW7pUy1HUHm/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/caballeros2025.jpg"><h3>CABALLEROS 2025</h3><a href="https://drive.google.com/file/d/1KBtzXGiL4weBJlg9hnutf-CHrSKFO9MV/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/escolar.jpg"><h3>ESCOLAR 2025</h3><a href="https://drive.google.com/file/d/10SoqcgGLpYy3NaDcHIMMFB_hwNOOTVkO/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/kids.jpg"><h3>KIDS</h3><a href="https://drive.google.com/file/d/1bnBuAwPFajYsJ5f7RFdyzI0EoMQD4_CY/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/evc.jpg"><h3>ESPECIAL VESTIR CASUAL</h3><a href="https://drive.google.com/file/d/1OyizWRm4Gt3xAvvrhnS20WdzyIkaijeE/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/confort2025.jpg"><h3>CONFORT 2025</h3><a href="https://drive.google.com/file/d/1N9KGjHwYTw8ALNEeP8KiohzvH_7YspPr/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/ofertas.jpg"><h3>OFERTAS</h3><a href="https://drive.google.com/file/d/1lXnZIO2TuMZS57ZYhbH6WUpmzBM3iX1Q/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+  </div>
+</section>
+
+<!-- ROPA -->
+<section>
+  <h2>Ropa</h2>
+  <div class="catalogo">
+    <div class="card"><img src="img/ELLA.jpg"><h3>ELLA</h3><a href="https://drive.google.com/file/d/1ELC1CrEiXgsI5zokGMI83RApqq72Hnpl/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/medchef.jpg"><h3>MEDCHEF</h3><a href="https://drive.google.com/file/d/1ppvYnbZxPdcm0IUntihc3gtiZ2k6OO8b/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/jeans.jpg"><h3>JEANS</h3><a href="https://drive.google.com/file/d/1hmGsHvRcmNpzZF5Wov7xhoRwZtNCQ_uR/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/basicos.jpg"><h3>BASICOS 2025</h3><a href="https://drive.google.com/file/d/1OOLyEef3f9F452Exq5nfj8J3IXcC_NL2/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/licencias.jpg"><h3>LICENCIAS</h3><a href="https://drive.google.com/file/d/17WfpB6RIQkxuRJi_haMBGU2VX3bvbq9f/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/lovelounge.jpg"><h3>LOVE LOUNGE</h3><a href="https://drive.google.com/file/d/1MNk_a_3_gq0PfxHOBBIQBQeANijFH6Ft/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/sevenjeans.jpg"><h3>SEVEN JEANS</h3><a href="https://drive.google.com/file/d/10nsmYzboygDWJwhxh0nQF25ZHTu-MKPp/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/vestir.jpg"><h3>VESTIR</h3><a href="https://drive.google.com/file/d/1c3_gUPMckCCvUFDUUWFdojJfu8C0RfwF/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+  </div>
+</section>
+
+<!-- ACCESORIOS -->
+<section>
+  <h2>Accesorios</h2>
+  <div class="catalogo accesorios">
+    <div class="card"><img src="img/accesorios.jpg"><h3>Accesorios</h3><a href="https://drive.google.com/file/d/1OoMSVcr7V2MW5gCQShjfYp1yW3Z1Fr1D/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+    <div class="card"><img src="img/mochilas.jpg"><h3>Mochilas</h3><a href="https://drive.google.com/file/d/1tL3YigY6PcTwrZ9744N9Owe0Jr9q2iq3/view?usp=drive_link" class="btn" target="_blank">Ver catálogo</a></div>
+  </div>
+</section>
+
+
+<footer>
+  © 2025 ShoesStore 
+</footer>
+
+<script>
+  // Animación de aparición progresiva al hacer scroll
+  const cards = document.querySelectorAll('.card, section h2');
+  const showOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    cards.forEach(card => {
+      const boxTop = card.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        card.style.animationPlayState = 'running';
+      }
+    });
+  };
+  window.addEventListener('scroll', showOnScroll);
+  showOnScroll();
+</script>
+
+</body>
+</html>
